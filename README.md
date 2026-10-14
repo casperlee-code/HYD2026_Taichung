@@ -13,10 +13,10 @@ Live site (GitHub Pages): https://yunching0513.github.io/HYD2026_Taichung/
 The interface is English-first, with Chinese as the secondary language: map labels, legend and side panels are in English, and village, district, zone, project and road names carry their Chinese names. The village search accepts English or Chinese.
 
 - The 8 districts and 214 villages of the former Taichung City on an English-labelled basemap (OpenStreetMap data); the 5 old-downtown districts (Central, East, South, West, North) carry a darker tint and a merged outline, Xitun, Nantun and Beitun a lighter one
-- Two styles and three tones from the switches in the header, remembered in the browser and shared with the landing page:
+- Two styles and four tones from the switches in the header, remembered in the browser and shared with the landing page:
   - **Deck**: the monochrome look of the HYD Healthy City Workshop deck (Instrument Serif, warm greys, 2px ink rules)
   - **Program**: after the HYD Taichung program page (Bricolage Grotesque and IBM Plex, navy ink on cool grey, sun-yellow highlights for the old downtown, project markers and charts, rounded cards)
-  - **Light**, **White** or **Dark** for either style; until one is chosen, light or dark follows the system setting
+  - **Light**, **White**, **Dark**, or **Cyberpunk** (賽博龐克) for either style; until one is chosen, light or dark follows the system setting
 - Pan by dragging, zoom with the wheel or a pinch; arrow keys pan, `+` / `-` zoom, `0` shows the full extent
 - Hover a village for its name and area; click or search to see its area, share of the district, area rank and village code
 - Road network from OpenStreetMap, with English and Chinese road names along the arterials

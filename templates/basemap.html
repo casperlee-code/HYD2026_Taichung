@@ -67,7 +67,7 @@
   --fs-xl: 32px;
 }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]):not([data-theme="white"]) {
+  :root:not([data-theme="light"]):not([data-theme="white"]):not([data-theme="cyberpunk"]) {
     --bg: #1c1c1c;
     --surface: #1c1c1c;
     --field: #262624;
@@ -146,6 +146,45 @@
   --shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
   color-scheme: dark;
 }
+
+:root[data-theme="cyberpunk"] {
+  --bg: #070814;
+  --surface: #0c1028;
+  --field: #101636;
+  --ground: #080a1c;
+  --ink: #00f0ff;
+  --ink-2: #e2e8f0;
+  --muted: #798bb0;
+  --rule: rgba(0, 240, 255, 0.28);
+  --line-vil: #ff007f;
+  --line-admin: #00f0ff;
+  --accent: #ff007f;
+  --accent-ink: #ffffff;
+  --tip-bg: #0d122e;
+  --tip-ink: #00f0ff;
+  --tip-muted: #ff007f;
+  --d0-fill: #2c0936;
+  --d0-hot: #451052;
+  --d1-fill: #0c1a38;
+  --d1-hot: #132854;
+  --d0-wash: 0.35;
+  --d0-wash-hot: 0.55;
+  --d1-wash: 0.12;
+  --d1-wash-hot: 0.28;
+  --tile-filter: invert(1) hue-rotate(185deg) brightness(0.68) contrast(1.4) saturate(1.8);
+  --neutral-fill: #1d274c;
+  --shadow: 0 8px 32px rgba(0, 240, 255, 0.25), 0 0 1px rgba(0, 240, 255, 0.5);
+  --hl: #fcee0a;
+  --on-hl: #070814;
+  --hl-text: #00f0ff;
+  --d0-wash-fill: #ff007f;
+  --old-band: rgba(255, 0, 127, 0.65);
+  --pin-halo: #ff007f;
+  --pin-halo-w: 2px;
+  --pin-shadow: drop-shadow(0 0 6px #ff007f);
+  --rule-strong: 1px solid #00f0ff;
+  color-scheme: dark;
+}
 /* program style (after the HYD Taichung program page); these rules come after the deck's so they win ties */
 :root[data-style="program"] {
   --bg: #f3f4f7;
@@ -197,7 +236,7 @@
   --rule: #e3e5ec;
 }
 @media (prefers-color-scheme: dark) {
-  :root[data-style="program"]:not([data-theme="light"]):not([data-theme="white"]) {
+  :root[data-style="program"]:not([data-theme="light"]):not([data-theme="white"]):not([data-theme="cyberpunk"]) {
     --bg: #11121a;
     --surface: #1a1c28;
     --field: #222536;
@@ -266,6 +305,191 @@
   --old-band: color-mix(in srgb, #f5c02a 60%, transparent);
   color-scheme: dark;
 }
+
+:root[data-style="program"][data-theme="cyberpunk"] {
+  --bg: #050611;
+  --surface: #0a0e24;
+  --field: #0e1433;
+  --ground: #070818;
+  --ink: #00f0ff;
+  --ink-2: #f1f5f9;
+  --muted: #8295be;
+  --rule: rgba(0, 240, 255, 0.32);
+  --line-vil: #ff007f;
+  --line-admin: #00f0ff;
+  --accent: #ff007f;
+  --accent-ink: #ffffff;
+  --tip-bg: #0c112d;
+  --tip-ink: #00f0ff;
+  --tip-muted: #ff007f;
+  --d0-fill: #340c40;
+  --d0-hot: #501360;
+  --d1-fill: #0a1c3d;
+  --d1-hot: #112c5e;
+  --d0-wash: 0.38;
+  --d0-wash-hot: 0.58;
+  --d1-wash: 0.14;
+  --d1-wash-hot: 0.32;
+  --tile-filter: invert(1) hue-rotate(185deg) brightness(0.68) contrast(1.4) saturate(1.8);
+  --neutral-fill: #1e2952;
+  --shadow: 0 8px 32px rgba(0, 240, 255, 0.3), 0 0 1px rgba(0, 240, 255, 0.6);
+  --hl: #fcee0a;
+  --on-hl: #050611;
+  --hl-text: #fcee0a;
+  --d0-wash-fill: #ff007f;
+  --old-band: rgba(255, 0, 127, 0.75);
+  --pin-halo: #ff007f;
+  --pin-halo-w: 3px;
+  --pin-shadow: drop-shadow(0 0 8px #ff007f);
+  --rule-strong: 1px solid #00f0ff;
+  color-scheme: dark;
+}
+
+/* Cyberpunk map & UI styling */
+:root[data-theme="cyberpunk"] .mapframe {
+  background: #050714;
+}
+:root[data-theme="cyberpunk"] .neatline {
+  stroke: #00f0ff;
+  filter: drop-shadow(0 0 4px rgba(0, 240, 255, 0.5));
+}
+:root[data-theme="cyberpunk"] .dist {
+  stroke: #00f0ff;
+  stroke-opacity: 0.9;
+  filter: drop-shadow(0 0 2px rgba(0, 240, 255, 0.6));
+}
+:root[data-theme="cyberpunk"] .old-outline {
+  stroke: rgba(255, 0, 127, 0.75);
+  filter: drop-shadow(0 0 8px #ff007f);
+}
+:root[data-theme="cyberpunk"] .sel-outline {
+  stroke: #fcee0a;
+  stroke-width: 3;
+  filter: drop-shadow(0 0 8px #fcee0a);
+}
+:root[data-theme="cyberpunk"] .hover-outline {
+  stroke: #ff007f;
+  stroke-width: 2;
+  filter: drop-shadow(0 0 5px #ff007f);
+}
+:root[data-theme="cyberpunk"] .vlabel .l1 {
+  fill: #e2e8f0;
+}
+:root[data-theme="cyberpunk"] .vlabel .l2 {
+  fill: #8295be;
+}
+:root[data-theme="cyberpunk"] .vlabel.is-sel .l1 {
+  fill: #fcee0a;
+  text-shadow: 0 0 8px rgba(252, 238, 10, 0.8);
+}
+:root[data-theme="cyberpunk"] .dlabel .l1 {
+  fill: #00f0ff;
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.6);
+}
+:root[data-theme="cyberpunk"] .dlabel .l2 {
+  fill: #ff007f;
+}
+:root[data-theme="cyberpunk"] .road.motorway {
+  stroke: #00f0ff;
+  stroke-width: 4;
+  filter: drop-shadow(0 0 3px rgba(0, 240, 255, 0.7));
+}
+:root[data-theme="cyberpunk"] .road.motorway-in {
+  stroke: #050611;
+  stroke-width: 1.6;
+}
+:root[data-theme="cyberpunk"] .road.trunk {
+  stroke: #00f0ff;
+  stroke-width: 3;
+}
+:root[data-theme="cyberpunk"] .road.primary {
+  stroke: #38bdf8;
+  stroke-width: 2.2;
+}
+:root[data-theme="cyberpunk"] .road.secondary {
+  stroke: #818cf8;
+  stroke-width: 1.5;
+}
+:root[data-theme="cyberpunk"] .road.tertiary {
+  stroke: #6366f1;
+  stroke-width: 1;
+}
+:root[data-theme="cyberpunk"] .road.rail {
+  stroke: #ff007f;
+  stroke-width: 1.6;
+  filter: drop-shadow(0 0 4px #ff007f);
+}
+:root[data-theme="cyberpunk"] .road.metro {
+  stroke: #10b981;
+  stroke-width: 2.2;
+  filter: drop-shadow(0 0 5px #10b981);
+}
+:root[data-theme="cyberpunk"] .proj-hit circle.proj-dot {
+  fill: #ff007f;
+  filter: drop-shadow(0 0 6px #ff007f);
+}
+:root[data-theme="cyberpunk"] .proj-foot {
+  stroke: #fcee0a;
+  filter: drop-shadow(0 0 4px #fcee0a);
+}
+:root[data-theme="cyberpunk"] .tip {
+  border: 1px solid #00f0ff;
+  box-shadow: 0 0 16px rgba(0, 240, 255, 0.35);
+}
+:root[data-theme="cyberpunk"] .theme-switch button[aria-pressed="true"] {
+  background: linear-gradient(135deg, #00f0ff, #0099ff);
+  color: #070814;
+  font-weight: 700;
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.6);
+}
+:root[data-theme="cyberpunk"] [data-theme-set="cyberpunk"][aria-pressed="true"] {
+  background: linear-gradient(135deg, #ff007f, #9900ff);
+  color: #ffffff;
+  box-shadow: 0 0 14px rgba(255, 0, 127, 0.7);
+}
+:root[data-theme="cyberpunk"] .aside {
+  background: #080a1c;
+  border-left: 1px solid rgba(0, 240, 255, 0.25);
+}
+:root[data-theme="cyberpunk"] .legend-dist {
+  background: rgba(16, 22, 54, 0.6);
+  border-color: rgba(0, 240, 255, 0.2);
+}
+:root[data-theme="cyberpunk"] .legend-dist:hover {
+  background: rgba(0, 240, 255, 0.1);
+  border-color: #00f0ff;
+}
+:root[data-theme="cyberpunk"] .search input {
+  background: #0c112d;
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  color: #00f0ff;
+}
+:root[data-theme="cyberpunk"] .search input:focus {
+  border-color: #00f0ff;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+}
+:root[data-theme="cyberpunk"] .search button {
+  background: #00f0ff;
+  color: #070814;
+  font-weight: 700;
+  box-shadow: 0 0 8px rgba(0, 240, 255, 0.5);
+}
+:root[data-theme="cyberpunk"] .search button:hover {
+  background: #ff007f;
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(255, 0, 127, 0.7);
+}
+:root[data-theme="cyberpunk"] .map-ctrl button {
+  background: #0c112d;
+  border-color: rgba(0, 240, 255, 0.3);
+  color: #00f0ff;
+}
+:root[data-theme="cyberpunk"] .map-ctrl button:hover {
+  background: #00f0ff;
+  color: #070814;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
 
 html, body { height: 100%; }
 body {
@@ -902,7 +1126,7 @@ h3.mini .zh { text-transform: none; letter-spacing: 0.02em; }
 <script>
   try {
     const t = localStorage.getItem("hyd2026-theme"), st = localStorage.getItem("hyd2026-style");
-    if (["light", "white", "dark"].includes(t)) document.documentElement.dataset.theme = t;
+    if (["light", "white", "dark", "cyberpunk"].includes(t)) document.documentElement.dataset.theme = t;
     if (st === "program") document.documentElement.dataset.style = st;
   } catch (err) { /* storage unavailable: follow the system setting */ }
 </script>
@@ -923,6 +1147,7 @@ h3.mini .zh { text-transform: none; letter-spacing: 0.02em; }
           <button type="button" data-theme-set="light" aria-pressed="false">Light<span class="zh" lang="zh-Hant-TW">淺色</span></button>
           <button type="button" data-theme-set="white" aria-pressed="false">White<span class="zh" lang="zh-Hant-TW">白色</span></button>
           <button type="button" data-theme-set="dark" aria-pressed="false">Dark<span class="zh" lang="zh-Hant-TW">深色</span></button>
+          <button type="button" data-theme-set="cyberpunk" aria-pressed="false">Cyberpunk<span class="zh" lang="zh-Hant-TW">賽博龐克</span></button>
         </div>
       </div>
       <p class="facts" id="facts"></p>

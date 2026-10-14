@@ -88,7 +88,7 @@ for (const [name, act] of [
     `alignment ${off.toFixed(2)} px, labels ${l.english}/${l.total} in English`);
   console.log(`  English: ${l.sampleEnglish.join(" | ")}`);
   console.log(`  local name only: ${l.sampleLocalOnly.join(" | ")}`);
-  for (const theme of ["light", "white", "dark"]) {
+  for (const theme of ["light", "white", "dark", "cyberpunk"]) {
     await page.click(`[data-theme-set="${theme}"]`);
     await page.waitForTimeout(200);
     await page.screenshot({ path: `${OUT}/${name}-${theme}.png` });

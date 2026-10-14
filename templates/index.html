@@ -36,7 +36,7 @@
   --font-zh: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
 }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]):not([data-theme="white"]) {
+  :root:not([data-theme="light"]):not([data-theme="white"]):not([data-theme="cyberpunk"]) {
     --bg: #1c1c1c;
     --field: #262624;
     --ground: #232321;
@@ -79,6 +79,29 @@
   --d1-fill: #2c2c2a;
   color-scheme: dark;
 }
+
+:root[data-theme="cyberpunk"] {
+  --bg: #070814;
+  --field: #0d122b;
+  --surface: #0e1430;
+  --ground: #0a0d21;
+  --ink: #00f0ff;
+  --ink-2: #e2e8f0;
+  --muted: #798bb0;
+  --rule: rgba(0, 240, 255, 0.28);
+  --line-vil: #ff007f;
+  --line-admin: #00f0ff;
+  --accent: #ff007f;
+  --accent-ink: #ffffff;
+  --d0-fill: #2c0936;
+  --d1-fill: #0d1e3d;
+  --hl: #fcee0a;
+  --on-hl: #070814;
+  --hl-text: #00f0ff;
+  --old-band: rgba(255, 0, 127, 0.65);
+  --rule-strong: 1px solid #00f0ff;
+  color-scheme: dark;
+}
 /* program style (after the HYD Taichung program page); after the deck's rules so it wins ties */
 :root[data-style="program"] {
   --bg: #f3f4f7;
@@ -109,7 +132,7 @@
 }
 :root[data-style="program"][data-theme="white"] { --bg: #ffffff; --ground: #f3f4f7; --rule: #e3e5ec; }
 @media (prefers-color-scheme: dark) {
-  :root[data-style="program"]:not([data-theme="light"]):not([data-theme="white"]) {
+  :root[data-style="program"]:not([data-theme="light"]):not([data-theme="white"]):not([data-theme="cyberpunk"]) {
     --bg: #11121a;
     --field: #1a1c28;
     --surface: #1a1c28;
@@ -152,6 +175,147 @@
   --old-band: color-mix(in srgb, #f5c02a 60%, transparent);
   color-scheme: dark;
 }
+
+:root[data-style="program"][data-theme="cyberpunk"] {
+  --bg: #050611;
+  --field: #0c112b;
+  --surface: #0e1533;
+  --ground: #080b1c;
+  --ink: #00f0ff;
+  --ink-2: #f1f5f9;
+  --muted: #8295be;
+  --rule: rgba(0, 240, 255, 0.32);
+  --line-vil: #ff007f;
+  --line-admin: #00f0ff;
+  --accent: #ff007f;
+  --accent-ink: #ffffff;
+  --d0-fill: #340c40;
+  --d1-fill: #0c2042;
+  --hl: #fcee0a;
+  --on-hl: #050611;
+  --hl-text: #fcee0a;
+  --old-band: rgba(255, 0, 127, 0.75);
+  --rule-strong: 1px solid #00f0ff;
+  color-scheme: dark;
+}
+
+/* Cyberpunk aesthetic enhancement */
+:root[data-theme="cyberpunk"] body {
+  background-color: var(--bg);
+  background-image: 
+    linear-gradient(to right, rgba(0, 240, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.035) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+:root[data-theme="cyberpunk"] h1 {
+  text-shadow: 0 0 20px rgba(0, 240, 255, 0.6), 0 0 2px #00f0ff;
+  color: #00f0ff;
+}
+:root[data-theme="cyberpunk"] h1 i {
+  color: #ff007f;
+  text-shadow: 0 0 15px rgba(255, 0, 127, 0.7);
+}
+:root[data-theme="cyberpunk"] h1 .zh {
+  color: #fcee0a;
+  text-shadow: 0 0 10px rgba(252, 238, 10, 0.5);
+}
+:root[data-theme="cyberpunk"] h2 {
+  color: #00f0ff;
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+}
+:root[data-theme="cyberpunk"] .eyebrow {
+  color: #ff007f;
+  text-shadow: 0 0 8px rgba(255, 0, 127, 0.5);
+}
+:root[data-theme="cyberpunk"] .kicker {
+  color: #fcee0a;
+}
+:root[data-theme="cyberpunk"] .work {
+  border: 1px solid rgba(0, 240, 255, 0.35);
+  background: rgba(13, 18, 43, 0.85);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.12), inset 0 0 15px rgba(0, 240, 255, 0.05);
+  position: relative;
+}
+:root[data-theme="cyberpunk"] .work::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid #ff007f;
+  border-left: 2px solid #ff007f;
+  pointer-events: none;
+}
+:root[data-theme="cyberpunk"] .work::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 14px;
+  height: 14px;
+  border-bottom: 2px solid #00f0ff;
+  border-right: 2px solid #00f0ff;
+  pointer-events: none;
+}
+:root[data-theme="cyberpunk"] .btn {
+  background: #00f0ff;
+  color: #070814;
+  font-weight: 700;
+  border: 1px solid #00f0ff;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+  transition: all 0.2s ease;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+:root[data-theme="cyberpunk"] .btn:hover {
+  background: #ff007f;
+  color: #ffffff;
+  border-color: #ff007f;
+  box-shadow: 0 0 20px rgba(255, 0, 127, 0.8);
+}
+:root[data-theme="cyberpunk"] a {
+  color: #00f0ff;
+  transition: color 0.15s ease;
+}
+:root[data-theme="cyberpunk"] a:hover {
+  color: #ff007f;
+  text-shadow: 0 0 8px rgba(255, 0, 127, 0.6);
+}
+:root[data-theme="cyberpunk"] .theme-switch button[aria-pressed="true"] {
+  background: linear-gradient(135deg, #00f0ff, #0099ff);
+  color: #070814;
+  font-weight: 700;
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.6);
+}
+:root[data-theme="cyberpunk"] [data-theme-set="cyberpunk"][aria-pressed="true"] {
+  background: linear-gradient(135deg, #ff007f, #9900ff);
+  color: #ffffff;
+  box-shadow: 0 0 14px rgba(255, 0, 127, 0.7);
+}
+:root[data-theme="cyberpunk"] table tr:hover td {
+  background: rgba(0, 240, 255, 0.06);
+}
+:root[data-theme="cyberpunk"] td.file a {
+  color: #00f0ff;
+}
+:root[data-theme="cyberpunk"] td .fmt {
+  color: #fcee0a;
+}
+:root[data-theme="cyberpunk"] .lede {
+  color: #c5d3ea;
+}
+:root[data-theme="cyberpunk"] .desc {
+  color: #9cb2d5;
+}
+:root[data-theme="cyberpunk"] .facts dt {
+  color: #798bb0;
+}
+:root[data-theme="cyberpunk"] .facts dd {
+  color: #e2e8f0;
+}
+
 
 * { box-sizing: border-box; }
 body {
@@ -315,7 +479,7 @@ footer a { color: inherit; }
 <script>
   try {
     const t = localStorage.getItem("hyd2026-theme"), st = localStorage.getItem("hyd2026-style");
-    if (["light", "white", "dark"].includes(t)) document.documentElement.dataset.theme = t;
+    if (["light", "white", "dark", "cyberpunk"].includes(t)) document.documentElement.dataset.theme = t;
     if (st === "program") document.documentElement.dataset.style = st;
   } catch (err) { /* storage unavailable: follow the system setting */ }
 </script>
@@ -333,6 +497,7 @@ footer a { color: inherit; }
           <button type="button" data-theme-set="light" aria-pressed="false">Light<span class="zh" lang="zh-Hant-TW">淺色</span></button>
           <button type="button" data-theme-set="white" aria-pressed="false">White<span class="zh" lang="zh-Hant-TW">白色</span></button>
           <button type="button" data-theme-set="dark" aria-pressed="false">Dark<span class="zh" lang="zh-Hant-TW">深色</span></button>
+          <button type="button" data-theme-set="cyberpunk" aria-pressed="false">Cyberpunk<span class="zh" lang="zh-Hant-TW">賽博龐克</span></button>
         </div>
       </div>
     </div>
